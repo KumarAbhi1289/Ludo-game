@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Ludo</title>
+</head>
+<body>
+    <section class="main-container">
+        <button class="red-btn" id="btn-red" onclick="getChance(1)"><span>Click me</span></button>
+        <div class="red-btn store red-store" >
+            <div class="stores store1 red-store1" id="red-store1" onclick="hide_dice_value(this.id)">
+                <h1 class="store1-value red-store1-value" draggable="true"></h1>
+            </div>
+            <div class="stores store2 red-store2" id="red-store2" onclick="hide_dice_value(this.id)">
+                <h1 class="store2-value red-store2-value" draggable="true"></h1>
+            </div>
+            <div class="stores store3 red-store3" id="red-store3" onclick="hide_dice_value(this.id)">
+                <h1 class="store3-value red-store3-value" draggable="true"></h1>
+            </div>
+        </div>
+        <button class="yellow-btn" id="btn-yellow" onclick="getChance(2)"><span>Click me</span></button>
+        <div class="yellow-btn store yellow-store">
+            <div class="stores store1 yellow-store1" id="yellow-store1" onclick="hide_dice_value(this.id)">
+                <h1 class="store1-value yellow-store1-value" draggable="true"></h1>
+            </div>
+            <div class="stores store2 yellow-store2" id="yellow-store2" onclick="hide_dice_value(this.id)">
+                <h1 class="store2-value yellow-store2-value" draggable="true"></h1>
+            </div>
+            <div class="stores store3 yellow-store3" id="yellow-store3" onclick="hide_dice_value(this.id)">
+                <h1 class="store3-value yellow-store3-value" draggable="true"></h1>
+            </div>
+        </div>
+        <button class="blue-btn" id="btn-blue" onclick="getChance(3)"><span>Click me</span></button>
+        <div class="blue-btn store blue-store">
+            <div class="stores store1 blue-store1" id="blue-store1" onclick="hide_dice_value(this.id)">
+                <h1 class="store1-value  blue-store1-value" draggable="true"></h1>
+            </div>
+            <div class="stores store2 blue-store2" id="blue-store2" onclick="hide_dice_value(this.id)">
+                <h1 class="store2-value blue-store2-value" draggable="true"></h1>
+            </div>
+            <div class="stores store3 blue-store3" id="blue-store3" onclick="hide_dice_value(this.id)">
+                <h1 class="store3-value blue-store3-value" draggable="true"></h1>
+            </div>
+        </div>
+        <button class="green-btn" id="btn-green" onclick="getChance(4)"><span>Click me</span></button>
+        <div class="green-btn store green-store">
+            <div class="stores store1 green-store1" id="green-store1" onclick="hide_dice_value(this.id)">
+                <h1 class="store1-value green-store1-value" draggable="true"></h1>
+            </div>
+            <div class="stores store2 green-store2" id="green-store2" onclick="hide_dice_value(this.id)">
+                <h1 class="store2-value green-store2-value" draggable="true"></h1>
+            </div>
+            <div class="stores store3 green-store3" id="green-store3" onclick="hide_dice_value(this.id)">
+                <h1 class="store3-value green-store3-value" draggable="true"></h1>
+            </div>
+        </div>
+        <section class="container">
+            <div class="grid-items green box">
+                <h1 id="green-value" draggable="true"></h1>
+                <div class="inside-box inside-green ">
+                    <div class="inside" id="green1">
+                        <div class="star color green-color" id="g1">
+                            <i class="fa fa-snowflake-o" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="inside" id="green2">
+                        <div class="star color green-color" id="g2"> 
+                            <i class="fa fa-snowflake-o" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="inside" id="green3">
+                        <div class="star color green-color" id="g3"> 
+                            <i class="fa fa-snowflake-o" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="inside" id="green4">
+                        <div class="star color green-color" id="g4"> 
+                            <i class="fa fa-snowflake-o" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-items red-green cell1 cells">
+                <div class="grid-item" id="50"></div>
+                <div class="grid-item" id="51"></div>
+                <div class="grid-item" id="52"></div>
+                <div class="grid-item" id="49"></div>
+                <div class="grid-item" id="red-home-1"></div>
+                <div class="grid-item red-stop" id="1">
+                    <div class="stop"></div>
+                </div>
+                <div class="grid-item stop" id="48"></div>
+                <div class="grid-item" id="red-home-2"></div>
+                <div class="grid-item" id="2"></div>
+                <div class="grid-item" id="47"></div>
+                <div class="grid-item" id="red-home-3"></div>
+                <div class="grid-item" id="3"></div>
+                <div class="grid-item" id="46"></div>
+                <div class="grid-item" id="red-home-4"></div>
+                <div class="grid-item" id="4"></div>
+                <div class="grid-item" id="45"></div>
+                <div class="grid-item" id="red-home-5"></div>
+                <div class="grid-item" id="5"></div>
+            </div>
+            <div class="grid-items red box">
+                <h1 id="red-value" draggable="true"></h1>
+                <div class="inside-box inside-red">
+                    <div class="inside" id="red1">
+                        <div class="star color red-color" id="r1">
+                             <i class="fa fa-snowflake-o" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="inside" id="red2">
+                        <div class="star color red-color" id="r2">
+                             <i class="fa fa-snowflake-o" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="inside" id="red3">
+                        <div class="star color red-color" id="r3">
+                             <i class="fa fa-snowflake-o" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="inside" id="red4">
+                        <div class="star color red-color" id="r4">
+                             <i class="fa fa-snowflake-o" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-items blue-green cell2 cells">
+                <div class="grid-item" id="39"></div>
+                <div class="grid-item green-stop" id="40">
+                    <div class="stop"></div>
+                </div>
+                <div class="grid-item" id="41"></div>
+                <div class="grid-item" id="42"></div>
+                <div class="grid-item" id="43"></div>
+                <div class="grid-item" id="44"></div>
+                <div class="grid-item" id="38"></div>
+                <div class="grid-item" id="green-home-1"></div>
+                <div class="grid-item" id="green-home-2"></div>
+                <div class="grid-item" id="green-home-3"></div>
+                <div class="grid-item" id="green-home-4"></div>
+                <div class="grid-item" id="green-home-5"></div>
+                <div class="grid-item" id="37"></div>
+                <div class="grid-item" id="36"></div>
+                <div class="grid-item stop" id="35"></div>
+                <div class="grid-item" id="34"></div>
+                <div class="grid-item" id="33"></div>
+                <div class="grid-item" id="32"></div>
+            </div>
+            <div class="grid-items center">
+                <div class="inside-box">
+                    <div class="crown"></div>
+                </div>
+            </div>
+            <div class="grid-items red-yellow cell2 cells">
+                <div class="grid-item" id="6"></div>
+                <div class="grid-item" id="7"></div>
+                <div class="grid-item" id="8"></div>
+                <div class="grid-item stop" id="9"></div>
+                <div class="grid-item" id="10"></div>
+                <div class="grid-item" id="11"></div>
+                <div class="grid-item" id="yellow-home-5"></div>
+                <div class="grid-item" id="yellow-home-4"></div>
+                <div class="grid-item" id="yellow-home-3"></div>
+                <div class="grid-item" id="yellow-home-2"></div>
+                <div class="grid-item" id="yellow-home-1"></div>
+                <div class="grid-item" id="12"></div>
+                <div class="grid-item" id="18"></div>
+                <div class="grid-item" id="17"></div>
+                <div class="grid-item" id="16"></div>
+                <div class="grid-item" id="15"></div>
+                <div class="grid-item yellow-stop" id="14">
+                    <div class="stop"></div>
+                </div>
+                <div class="grid-item" id="13"></div>
+            </div>
+            <div class="grid-items blue box">
+                <h1 id="blue-value" draggable="true"></h1>
+                <div class="inside-box inside-blue">
+                    <div class="inside" id="blue1">
+                        <div class="star color blue-color" id="b1"> 
+                             <i class="fa fa-snowflake-o" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="inside" id="blue2">
+                        <div class="star color blue-color" id="b2"> 
+                             <i class="fa fa-snowflake-o" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="inside" id="blue3">
+                        <div class="star color blue-color" id="b3"> 
+                             <i class="fa fa-snowflake-o" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="inside" id="blue4">
+                        <div class="star color blue-color" id="b4"> 
+                             <i class="fa fa-snowflake-o" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-items yellow-blue cell1 cells">
+                <div class="grid-item" id="31"></div>
+                <div class="grid-item" id="blue-home-5"></div>
+                <div class="grid-item" id="19"></div>
+                <div class="grid-item" id="30"></div>
+                <div class="grid-item" id="blue-home-4"></div>
+                <div class="grid-item" id="20"></div>
+                <div class="grid-item" id="29"></div>
+                <div class="grid-item" id="blue-home-3"></div>
+                <div class="grid-item" id="21"></div>
+                <div class="grid-item" id="28"></div>
+                <div class="grid-item" id="blue-home-2"></div>
+                <div class="grid-item stop" id="22"></div>
+                <div class="grid-item blue-stop" id="27">
+                    <div class="stop"></div>
+                </div>
+                <div class="grid-item" id="blue-home-1"></div>
+                <div class="grid-item" id="23"></div>
+                <div class="grid-item" id="26"></div>
+                <div class="grid-item" id="25"></div>
+                <div class="grid-item" id="24"></div>    
+            </div>
+            <div class="grid-items yellow box">
+                <h1 id="yellow-value" draggable="true"></h1>
+                <div class="inside-box inside-yellow">
+                    <div class="inside" id="yellow1">
+                        <div class="star color yellow-color" id="y1">
+                            <i class="fa fa-snowflake-o" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="inside" id="yellow2">
+                        <div class="star color yellow-color" id="y2">
+                            <i class="fa fa-snowflake-o" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="inside" id="yellow3">
+                        <div class="star color yellow-color" id="y3">
+                            <i class="fa fa-snowflake-o" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="inside" id="yellow4">
+                        <div class="star color yellow-color" id="y4">
+                            <i class="fa fa-snowflake-o" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
