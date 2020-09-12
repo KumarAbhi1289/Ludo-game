@@ -8,11 +8,11 @@ var temp = 1;
         // path decide
         var red_path = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '49', '50', 'red-home-1', 'red-home-2', 'red-home-3', 'red-home-4', 'red-home-5', 'center']
 
-        var yellow_path = ['13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '49', '50', '51', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', 'yellow-home-1', 'yellow-home-2', 'yellow-home-3', 'yellow-home-4', 'yellow-home-5', 'center']
+        var yellow_path = ['13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '49', '50', '51', '52', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', 'yellow-home-1', 'yellow-home-2', 'yellow-home-3', 'yellow-home-4', 'yellow-home-5', 'center']
 
-        var blue_path = ['26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '49', '50', '51', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', 'blue-home-1', 'blue-home-2', 'blue-home-3', 'blue-home-4', 'blue-home-5', 'center']
+        var blue_path = ['26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '49', '50', '51', '52', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', 'blue-home-1', 'blue-home-2', 'blue-home-3', 'blue-home-4', 'blue-home-5', 'center']
 
-        var green_path = ['39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '49', '50', '51', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '37', 'green-home-1', 'green-home-2', 'green-home-3', 'green-home-4', 'green-home-5', 'center']
+        var green_path = ['39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '49', '50', '51', '52', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '37', 'green-home-1', 'green-home-2', 'green-home-3', 'green-home-4', 'green-home-5', 'center']
 
         var r1 = r2 = r3 = r4 = y1 = y2 = y3 = y4 = g1 = g2 = g3 = g4 = b1 = b2 = b3 = b4 = 0; 
         var redToken = [r1, r2, r3, r4];
@@ -21,8 +21,6 @@ var temp = 1;
         var blueToken = [b1, b2, b3, b4];
         var getToken = false;
         var tokenChance = false;
-
-        // console.log(red_path[10], yellow_path[10], blue_path[10], green_path[10]);
 
         let getRedSix = false, getYellowSix = false, getBlueSix = false, getGreenSix = false;
         var list_of_click_id = ['store1', 'store2', 'store3'];
@@ -65,22 +63,16 @@ var temp = 1;
             if(click){
                 let index = 0;
                 if(chanceComplete){
-                    // console.log('hey',);
                     let check_index = 0;
                     store_values_id = "#" + clicked;
                     store_value_hide = document.querySelector(store_values_id);
                     store_value_hide.style.display = "none";
-                    // last_index_of_clicked = clicked[(clicked.length)-1];
                     clicked_value = (clicked.slice(-6, (clicked.length)));
-                    // console.log(clicked_value, list_of_click_id.length);
                     while(check_index < list_of_click_id.length){
                         if(list_of_click_id[check_index] == clicked_value){
                             list_of_click_id.splice(check_index, 1);
                             getValue = store[check_index];
-                            // console.log(getSix);
                             if(getSix){
-                                // move(get_id, getValue, getSix);
-                                // console.log('getScore'); 
                                 let getFierstIdValue = get_id.slice(0, 1);
                                 let get1 = getFierstIdValue + "1";
                                 let get2 = getFierstIdValue + "2";
@@ -98,13 +90,11 @@ var temp = 1;
                                 else if (document.getElementById(get4).addEventListener("click", function(){move(get_id, getValue, getSix, get4)}));
                             }
                             store.splice(check_index, 1);
-                            // console.log(store, list_of_click_id, getValue);
                             break;
                         }
                         check_index += 1;
                     }
                     if(store.length == 0){
-                        // console.log('btn', display_btn);
                         display_btn.style.display = "block";
                         list_of_click_id = ['store1', 'store2', 'store3'];
                     }
@@ -122,7 +112,6 @@ var temp = 1;
                 chanceComplete = false;
                 h1.style.display = "block";
                 store.push(num);
-                // console.log(store)
                 setTimeout(zoom_close, 1000, id);
                 while(i <= temp){
                     let str = show_store;
@@ -132,7 +121,6 @@ var temp = 1;
                     display_box.style.display = 'block';
                     display_value.style.display = 'block';
                     display_value.innerHTML = store[i-1];
-                    // console.log(display_value);
                     i += 1;
                 }
                 if(num == 6 && temp < 4){
@@ -148,21 +136,12 @@ var temp = 1;
                     else if (id == 'green-value') {
                         getGreenSix = true;
                     }
-                    // // console.log('inside', num);        
-                    // temp += 1;  
-                    // // i = temp;   
-                    //     console.log(num);
-                    //     var get_input;
-                    //     
-                    //     document.getElementById(id).addEventListener('click', getChance(get_input));
-                    //     console.log('not work');
                     console.log(temp);
                     if(temp == 3 && num == 6){
                         temp = 1;
                         i = 1;
                         display_btn.style.display = "block";
                         hide_btn.style.display = "none";
-                        // hide_store.style.display = "none";
                         for(k = 1; k <= 3; k++){
                             masked_store = mask_store + k;
                             hide_icon = document.querySelector(masked_store)
@@ -177,37 +156,10 @@ var temp = 1;
                     }     
                 }
                 else{
-                    // let arrayLentgh = 0
-                    // while(arrayLentgh < store.length) {
-                    //     store_value = mask_store + (arrayLentgh + 1)
-                    //     hide_value = document.querySelector(store_value);
-                    //     last_element = (store.length) - 1;
-                    //     if(id = 'red-value'){   
-                    //         switch(store_value){
-                    //             case '.red-store1': hide_value.addEventListener('click', hide_dice_value(store_value, display_btn, last_element));
-                    //             break;
-                    //             case '.red-store2': hide_value.addEventListener('click', hide_dice_value(store_value, display_btn, last_element));
-                    //             break;
-                    //             case '.red-store3': hide_value.addEventListener('click', hide_dice_value(store_value, display_btn, last_element));
-                    //             break;
-                    //         }
-                    //     } else if ('yellow-value') {
-                            
-                    //     } else if ('blue-value') {
-                            
-                    //     } else if('green-value'){
-                            
-                    //     }
-                    // }
                     temp = 1; 
                     i = 1;
-                    // var str = document.querySelector('store1');
-                    // store = [];
-                    // display_store.style.display = "inline";
                     hide_btn.style.display = "none";
                     chanceComplete = true;
-                    // hide_store.style.display = "none";
-                    // stores.style.display = 'none';
                     if(count==4){
                         count = 0;
                     }
@@ -217,9 +169,6 @@ var temp = 1;
         }
         var click = false;
         function hide_dice_value(clicked, click){
-        //    store_values_id = "#" + clicked;
-        //    store_value_hide = document.querySelector(store_values_id);
-        //    store_value_hide.style.display = "none";
             click = true;
             dice(click, clicked);
         }
@@ -228,13 +177,7 @@ var temp = 1;
             h1.style.display = "none";
         }
         function move(get_id, getValue, getSix, getTokenId){
-            // console.log(move_id);
-            // getId = '#' + move_id;
-            // idf = move_id.parentNode;
-            // iad = idf.id;
-            // move_id.parentNode.innerHTML = ''; 
-            // move_element = document.getElementById(red_path[5]).innerHTML = '<div class="star color green-color" id="g1" onclick="move(this)"><i class="fa fa-snowflake-o" aria-hidden="true"></i></div>';
-            // console.log(iad)
+
             if(getSix){
                 console.log('hey');
                 if(tokenChance){
@@ -251,9 +194,7 @@ var temp = 1;
                                 }
                             }
                             else{
-                                console.log(r1, getValue);
                                 r1 += getValue;
-                                console.log(r1, getValue);
                                 token_id = document.getElementById('r1');
                                 token_id.parentNode.innerHTML = '';
                                 document.getElementById(red_path[r1-1]).innerHTML = '<div class="star color red-color" id="r1"><i class="fa fa-snowflake-o" aria-hidden="true"></i></div>';  
@@ -271,9 +212,7 @@ var temp = 1;
                                 }
                             }
                             else {
-                                console.log(r2, getValue);
                                 r2 += getValue;
-                                console.log(r2, getValue);
                                 token_id = document.getElementById('r2');
                                 token_id.parentNode.innerHTML = '';
                                 document.getElementById(red_path[r2-1]).innerHTML = '<div class="star color red-color" id="r2"><i class="fa fa-snowflake-o" aria-hidden="true"></i></div>';
@@ -291,9 +230,7 @@ var temp = 1;
                                 }
                             }
                             else{
-                                console.log(r3, getValue);
                                 r3 += getValue;
-                                console.log(r3, getValue);
                                 token_id = document.getElementById('r3');
                                 token_id.parentNode.innerHTML = '';
                                 document.getElementById(red_path[(r3 - 1)]).innerHTML = '<div class="star color red-color" id="r3"><i class="fa fa-snowflake-o" aria-hidden="true"></i></div>';
@@ -311,9 +248,7 @@ var temp = 1;
                                 }
                             }
                             else {
-                                console.log(r4, getValue);
-                                r4 += getValue;
-                                console.log(r4, getValue);                       
+                                r4 += getValue;                       
                                 token_id = document.getElementById('r4');
                                 token_id.parentNode.innerHTML = '';
                                 document.getElementById(red_path[(r4 - 1)]).innerHTML = '<div class="star color red-color" id="r4"><i class="fa fa-snowflake-o" aria-hidden="true"></i></div>';
@@ -334,9 +269,7 @@ var temp = 1;
                                 }
                             }
                             else{
-                                console.log(y1, getValue);
                                 y1 += getValue;
-                                console.log(y1, getValue);
                                 token_id = document.getElementById('y1');
                                 token_id.parentNode.innerHTML = '';
                                 document.getElementById(yellow_path[y1]).innerHTML = '<div class="star color yellow-color" id="y1"><i class="fa fa-snowflake-o" aria-hidden="true"></i></div>'; 
@@ -354,9 +287,7 @@ var temp = 1;
                                 }
                             }
                             else{
-                                console.log(y2, getValue);
                                 y2 += getValue;
-                                console.log(y2, getValue);
                                 token_id = document.getElementById('y2');
                                 token_id.parentNode.innerHTML = '';
                                 document.getElementById(yellow_path[y2]).innerHTML = '<div class="star color yellow-color" id="y2"><i class="fa fa-snowflake-o" aria-hidden="true"></i></div>'; 
@@ -374,9 +305,7 @@ var temp = 1;
                                 }
                             }
                             else{
-                                console.log(y3, getValue);
                                 y3 += getValue;
-                                console.log(y3, getValue);
                                 token_id = document.getElementById('y3');
                                 token_id.parentNode.innerHTML = '';
                                 document.getElementById(yellow_path[y3]).innerHTML = '<div class="star color yellow-color" id="y3"><i class="fa fa-snowflake-o" aria-hidden="true"></i></div>'; 
@@ -394,9 +323,7 @@ var temp = 1;
                                 }
                             }
                             else{
-                                console.log(y4, getValue);
                                 y4 += getValue;
-                                console.log(y4, getValue);
                                 token_id = document.getElementById('y4');
                                 token_id.parentNode.innerHTML = '';
                                 document.getElementById(yellow_path[y4]).innerHTML = '<div class="star color yellow-color" id="y4"><i class="fa fa-snowflake-o" aria-hidden="true"></i></div>'; 
@@ -417,9 +344,7 @@ var temp = 1;
                                 }
                             }
                             else{
-                                console.log(b1, getValue);
                                 b1 += getValue;
-                                console.log(b1, getValue);
                                 token_id = document.getElementById('b1');
                                 token_id.parentNode.innerHTML = '';
                                 document.getElementById(blue_path[b1]).innerHTML = '<div class="star color blue-color" id="b1"><i class="fa fa-snowflake-o" aria-hidden="true"></i></div>'; 
@@ -437,9 +362,7 @@ var temp = 1;
                                 }
                             }
                             else{
-                                console.log(b2, getValue);
                                 b2 += getValue;
-                                console.log(b2, getValue);
                                 token_id = document.getElementById('b2');
                                 token_id.parentNode.innerHTML = '';
                                 document.getElementById(blue_path[b2]).innerHTML = '<div class="star color blue-color" id="b2"><i class="fa fa-snowflake-o" aria-hidden="true"></i></div>'; 
@@ -457,9 +380,7 @@ var temp = 1;
                                 }
                             }
                             else{
-                                console.log(b3, getValue);
                                 b3 += getValue;
-                                console.log(b3, getValue);
                                 token_id = document.getElementById('b3');
                                 token_id.parentNode.innerHTML = '';
                                 document.getElementById(blue_path[b3]).innerHTML = '<div class="star color blue-color" id="b3"><i class="fa fa-snowflake-o" aria-hidden="true"></i></div>'; 
@@ -477,9 +398,7 @@ var temp = 1;
                                 }
                             }
                             else{
-                                console.log(b4, getValue);
                                 b4 += getValue;
-                                console.log(b4, getValue);
                                 token_id = document.getElementById('b4');
                                 token_id.parentNode.innerHTML = '';
                                 document.getElementById(blue_path[b4]).innerHTML = '<div class="star color blue-color" id="b4"><i class="fa fa-snowflake-o" aria-hidden="true"></i></div>'; 
@@ -500,9 +419,7 @@ var temp = 1;
                                 }
                             }
                             else{
-                                console.log(g1, getValue);
                                 g1 += getValue;
-                                console.log(g1, getValue);
                                 token_id = document.getElementById('g1');
                                 token_id.parentNode.innerHTML = '';
                                 document.getElementById(green_path[g1]).innerHTML = '<div class="star color green-color" id="g1"><i class="fa fa-snowflake-o" aria-hidden="true"></i></div>'; 
@@ -520,9 +437,7 @@ var temp = 1;
                                 }
                             }
                             else{
-                                console.log(g2, getValue);
                                 g2 += getValue;
-                                console.log(g2, getValue);
                                 token_id = document.getElementById('g2');
                                 token_id.parentNode.innerHTML = '';
                                 document.getElementById(green_path[g2]).innerHTML = '<div class="star color green-color" id="g2"><i class="fa fa-snowflake-o" aria-hidden="true"></i></div>'; 
@@ -540,9 +455,7 @@ var temp = 1;
                                 }
                             }
                             else{
-                                console.log(g3, getValue);
                                 g3 += getValue;
-                                console.log(g3, getValue);
                                 token_id = document.getElementById('g3');
                                 token_id.parentNode.innerHTML = '';
                                 document.getElementById(green_path[g3]).innerHTML = '<div class="star color green-color" id="g3"><i class="fa fa-snowflake-o" aria-hidden="true"></i></div>'; 
@@ -560,9 +473,7 @@ var temp = 1;
                                 }
                             }
                             else{
-                                console.log(g4, getValue);
                                 g4 += getValue;
-                                console.log(g4, getValue);
                                 token_id = document.getElementById('g4');
                                 token_id.parentNode.innerHTML = '';
                                 document.getElementById(green_path[g4]).innerHTML = '<div class="star color green-color" id="g4"><i class="fa fa-snowflake-o" aria-hidden="true"></i></div>'; 
